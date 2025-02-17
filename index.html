@@ -5,9 +5,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Turismo</title>
+    <link rel="icon" type="image/png" href="img/cropped-favicon-m4t-w1-opt.png">
+
     <!-- Latest compiled and minified CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .navbar-nav .nav-link {
+            position: relative;
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+            /* Cor padrão do texto */
+            transition: color 0.3s ease-in-out;
+        }
+
+        .navbar-nav .nav-link::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 0;
+            height: 3px;
+            background-color: #000000;
+            /* Cor da animação */
+            transition: width 0.3s ease-in-out;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #000000;
+            /* Cor ao passar o mouse */
+        }
+
+        .navbar-nav .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+
+
+
 </head>
 
 <body>
@@ -20,13 +56,13 @@
                 <div class="collapse navbar-collapse" id="mynavbar">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="javascript:void(0)">Home</a>
+                            <a class="nav-link" href="#demo">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="javascript:void(0)">Pacotes</a>
+                            <a class="nav-link" href="#pacotes">Pacotes</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="javascript:void(0)">Contatos</a>
+                            <a class="nav-link" href="#contatos">Contatos</a>
                         </li>
                     </ul>
                     <form class="d-flex">
@@ -39,11 +75,185 @@
 
     </header>
     <main>
+        <!-- Carousel -->
+        <div id="demo" class="carousel slide" data-bs-ride="carousel">
 
+            <!-- Indicators/dots -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+
+            </div>
+            <!-- The slideshow/carousel -->
+            <div class="carousel-inner">
+                <div class="carousel-item active ">
+                    <img src="img/vista_palmas.jpg" alt="Palmas do Tocantins" class="d-block w-100 car-img">
+                    <div class="carousel-caption">
+                        <h3>Palmas Tocantins</h3>
+                        <p>Conheça a Capital do Estado</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/Jalapão.avif" alt="Dunas do Jalapão" class="d-block w-100 car-img">
+                    <div class="carousel-caption">
+                        <h3>Jalapão</h3>
+                        <p>Conheça os Encantos e as Dunas deste lugar</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/e14d9b6dbca6a232e841dd173f8c534b.jpeg" alt="Natividade" class="d-block w-100 car-img">
+                    <div class="carousel-caption">
+                        <h3>Natividade</h3>
+                        <p>Cidade histórica e de muitra tradição</p>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Left and right controls/icons -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+        <!--Divisão-->
+        <div class="container-fluid divisao">
+            <h2>Conheça o Tocantins</h2>
+        </div>
+        <!--Pacotes-->
+        <section class="row sec-pacotes" id="pacotes">
+            <div class="card col-3" style="width:300px">
+                <img class="card-img-top" src="img/azuis.jpg" alt="Card image">
+                <div class="card-body">
+                    <h4 class="card-title">Rio Azuis</h4>
+                    <p class="card-text">O Rio Azuis, em Aurora do Tocantins (TO), é um dos menores rios do mundo, com
+                        apenas 147 metros de extensão. Suas águas são cristalinas e azul-turquesa, perfeitas para banho
+                        e fotos. A temperatura é sempre refrescante, e a região conta com quiosques e restaurantes
+                        servindo comidas típicas. Um ótimo destino para relaxar e curtir a natureza! .</p>
+                    <a href="https://www.instagram.com/rioazuis/" target="_blank" class="btn btn-primary">Saiba Mas</a>
+                </div>
+            </div>
+            <div class="card col-3" style="width:320px">
+                <img class="card-img-top" src="img/361886.jpg" alt="Card image">
+                <div class="card-body">
+                    <h4 class="card-title">Taquaruçu</h4>
+                    <p class="card-text">Taquaruçu é um distrito de Palmas (TO) famoso por suas cachoeiras, trilhas e
+                        ecoturismo. 🌿🏞️
+
+                        ✅ Destaques:
+
+                        Cachoeira do Escorrega Macaco e Cachoeira da Roncadeira (ótimas para banho e rapel)
+                        Pedra Furada, mirante com vista incrível
+                        Festival Gastronômico, com pratos típicos do Tocantins
+                        Tirolesa Voo do Pontal, uma das maiores do Brasil
+                        Ótimo destino para quem ama natureza e aventura.!</p>
+                    <a href="https://www.tripadvisor.com.br/Attractions-g20181735-Activities-Taquarussu_State_of_Tocantins."
+                        target="_blank" class="btn btn-primary">Saiba Mas</a>
+                </div>
+            </div>
+            <div class="card col-3" style="width:300px">
+                <img class="card-img-top" src="img/images jalapao.jpg" alt="Card image">
+                <div class="card-body">
+                    <h4 class="card-title">Jalapão</h4>
+                    <p class="card-text">O Jalapão, no Tocantins, é um paraíso do ecoturismo, com paisagens
+                        impressionantes de dunas douradas, fervedouros de águas cristalinas, cachoeiras e formações
+                        rochosas. 🌵🏜️
+
+                        ✅ Principais atrações:
+
+                        Dunas do Jalapão – Pôr do sol incrível!
+                        Fervedouros – Piscinas naturais de água azul onde não se afunda.
+                        Cachoeira da Velha – A maior do Jalapão, perfeita para fotos.
+                        Serra do Espírito Santo – Vista panorâmica de tirar o fôlego!
+                        Destino perfeito para quem ama aventura e natureza selvagem.!</p>
+                    <a href="https://www.melhoresdestinos.com.br/jalapao-dicas.html" target="_blank"
+                        class="btn btn-primary">Saiba Mas</a>
+                </div>
+            </div>
+            <div class="card col-3" style="width:300px">
+                <img class="card-img-top" src="img/palms.jpg" alt="Card image">
+                <div class="card-body">
+                    <h4 class="card-title">Capital Do Tocantins</h4>
+                    <p class="card-text">Palmas, capital do Tocantins, é uma cidade moderna, planejada e cercada por
+                        belezas naturais.
+                        O que fazer:
+                        Praia da Graciosa – Ótima para curtir o pôr do sol.
+                        Ilha do Canela – Paraíso de águas calmas e areia branca.
+                        Parque Cesamar – Perfeito para caminhadas e lazer ao ar livre.
+                        Feirinha da 304 Sul – Comida típica e artesanato local.
+                        Ponto de partida para destinos como Jalapão e Taquaruçu, Palmas combina natureza e urbanismo!
+                    </p>
+                    <a href="https://www.worldpackers.com/pt-BR/articles/o-que-fazer-em-palmas-tocantins"
+                        target="_blank" class="btn btn-primary">Saiba Mas</a>
+                </div>
+            </div>
+        </section>
+
+        <!--Divisão-->
+        <div class="container-fluid divisao">
+            <h2>Fale Conosco</h2>
+        </div>
+        <!--Contatos-->
+        <section class="row sec-contato" id="contatos">
+            <div class="col-sm-6">
+                <form action="">
+                    <div class="mb-3 mt-3">
+                        <label for="nome" class="form-label">Nome:</label>
+                        <input type="text" class="form-control" id="nome" placeholder="Informe seu nome" name="nome">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email:</label>
+                        <input type="email" class="form-control" id="email" placeholder="Informe seu email.."
+                            name="email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="comment">Mensagem:</label>
+                        <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+                    </div>
+
+
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+            <div class="col-sm-6">
+                <div class="row links">
+                    <div class="col-sm-6">
+                        <h6>WhatsApp</h6>
+                        <a href="https://wa.me/5563991157774?text=%F0%9F%8C%BF%20Roteiro%3A%20Natividade%20%2B%20Palmas%20%2B%20Azuis%20%F0%9F%8F%9D%EF%B8%8F%0ADura%C3%A7%C3%A3o%3A%207%20dias%20%2F%206%20noites%0ASa%C3%ADda%20de%3A%20Cidade%20a%20definir%0A%0A%F0%9F%8F%9E%EF%B8%8F%20O%20que%20est%C3%A1%20incluso%3F%0A%E2%9C%85%20Passagens%20(a%C3%A9rea%20ou%20rodovi%C3%A1ria%2C%20dependendo%20da%20origem)%0A%E2%9C%85%20Hospedagem%20(hot%C3%A9is%2Fpousadas%20aconchegantes)%0A%E2%9C%85%20Transporte%20entre%20as%20cidades%0A%E2%9C%85%20Passeios%20incr%C3%ADveis%20em%20cada%20destino%0A%0A%F0%9F%93%8D%20Roteiro%20detalhado%3A%0A%F0%9F%93%8D%20Natividade%20(RJ%20ou%20TO)%20%E2%80%93%202%20noites%0A%0AVisita%20a%20pontos%20tur%C3%ADsticos%20hist%C3%B3ricos%0APasseio%20ecol%C3%B3gico%20(trilhas%20ou%20cachoeiras)%0A%F0%9F%93%8D%20Palmas%20(TO)%20%E2%80%93%202%20noites%0A%0APraia%20da%20Graciosa%20e%20Ilha%20do%20Canela%0APasseio%20pelo%20Jalap%C3%A3o%20(opcional)%0A%F0%9F%93%8D%20Azuis%20(TO)%20%E2%80%93%202%20noites%0A%0ABanho%20nas%20%C3%A1guas%20cristalinas%20do%20Rio%20Azuis%0AExperi%C3%AAncia%20gastron%C3%B4mica%20com%20comida%20t%C3%ADpica%20tocantinense%0A%F0%9F%92%B0%20Valor%20estimado%3A%20A%20partir%20de%20R%24%203.800%20por%20pessoa"
+                            target="_blank">
+                            <img src="img/whatsapp-873316_640.webp" width="100px">
+                        </a>
+                    </div>
+                    <div class="col-sm-6">
+                        <h6>Instagram</h6>
+                        <a href="https://www.instagram.com/jhonata_asl?igsh=dmYxcnM3NzltY2do" target="_blank">
+                            <img src="img/iintra.jpeg" width="100px">
+                        </a>
+                    </div>
+                    <!--Mapa da Região-->
+                    <div class="mapa">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d31416.609372371517!2d-48.33574419999999!3d-10.174463999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1739578053221!5m2!1spt-BR!2sbr"
+                            width="700" height="480" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        Palmas-TO
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
 
     </main>
     <footer class="fixed-bottom">
-        <h5>&copy; TocantinsTur. Todos os direitos reservados a JHONTECH</h5>
+        <h5>&copy; TocantinsTur. Todos os direitos reservados a JHONTECH </h5>
 
 
     </footer>
